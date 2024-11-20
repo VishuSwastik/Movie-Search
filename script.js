@@ -88,7 +88,8 @@ function displayMovies(movies) {
 }
 
 function fetchMovies() {
-    const url = `http://www.omdbapi.com/?s=latest&apikey=${API_KEY}&page=1`;
+    // const url = `http://www.omdbapi.com/?s=latest&apikey=${API_KEY}&page=1`;
+    const url = `${BASE_URL}?s=latest&apikey=${API_KEY}&page=1`;
 
     fetch(url)
         .then(response => response.json())
