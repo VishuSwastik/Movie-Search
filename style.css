@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(54, 53, 53);
+  
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(40, 40, 40);
+   padding: 6px;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+}
+
+.social-icons img {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+
+.nav-bar .nav-link {
+    display: flex;
+    padding-top: 20px;
+}
+
+.nav-bar .nav-link li {
+    list-style: none;
+    margin-right: 40px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.search-bar {
+    padding: 30px;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.search-bar input {
+    background-color: black;
+    width: 50%;
+    height: 45px;
+    border: none;
+    color: aliceblue;
+    border-radius:50px 0 0 50px;
+}
+
+.search-bar .search{
+    background-color: black;
+    border-radius: 0 50px 50px 0;
+    height: 45px;
+   
+    
+}
+
+.search-bar .search img {
+    height: 25px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.movie-item {
+    width: 250px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    margin: 10px; /* Margin around each card */
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    position: relative; /* For positioning title */
+    margin: 30px;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+}
+
+.movie-item img {
+    width: 100%; /* Responsive image */
+    height: 350px; /* Fixed height for image */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+.movie-item h3 {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Padding for the title */
+    color: white; /* White text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    position: absolute; /* Position title absolutely */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    width: 100%;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #e6b542;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 30px;
+    border: 1px solid #323232;
+    width: 80%; /* Could be more or less, depending on screen size */
+    width: 400px; /* Max width for the modal */
+    border-radius: 8px; /* Rounded corners */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid rgb(255, 166, 0);
+}
+
+.modal-content h2 {
+    padding-bottom: 10px;
+}
+
+.modal-content p {
+    padding-bottom: 10px;
+}
+
+.close-button {
+    color: #050505;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
