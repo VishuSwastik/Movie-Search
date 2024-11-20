@@ -2,7 +2,7 @@
 const API_KEY = '16c0e8d4'; 
 const imdbID = 'tt3896198';
 
-const BASE_URL = 'http://www.omdbapi.com/';
+const BASE_URL = 'https://www.omdbapi.com/';
 const SEARCH_DELAY = 500; 
 let searchTimeout = null;
 
