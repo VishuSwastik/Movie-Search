@@ -2,7 +2,7 @@
 const API_KEY = '16c0e8d4'; 
 const imdbID = 'tt3896198';
 
-const BASE_URL = 'https://www.omdbapi.com/';
+// const BASE_URL = 'https://www.omdbapi.com/';
 const SEARCH_DELAY = 500; 
 let searchTimeout = null;
 
@@ -48,7 +48,7 @@ async function searchMovies(query) {
     let totalResults = 0;
 
     do {
-        const url = `${BASE_URL}?s=${trimmedQuery}&apikey=${API_KEY}&page=${page}`;
+        const url = `https://www.omdbapi.com/?s=${trimmedQuery}&apikey=${API_KEY}&page=${page}`;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -88,8 +88,7 @@ function displayMovies(movies) {
 }
 
 function fetchMovies() {
-    // const url = `http://www.omdbapi.com/?s=latest&apikey=${API_KEY}&page=1`;
-    const url = `${BASE_URL}?s=latest&apikey=${API_KEY}&page=1`;
+    const url = `https://www.omdbapi.com/?s=latest&apikey=${API_KEY}&page=1`;
 
     fetch(url)
         .then(response => response.json())
@@ -123,7 +122,7 @@ function fetchMovies() {
 }
 
 function showMovieDetails(imdbID) {
-    const detailUrl = `http://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`;
+    const detailUrl = `https://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`;
 
     fetch(detailUrl)
         .then(response => response.json())
